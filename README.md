@@ -1,6 +1,6 @@
 # Lazar Minkov — Portfolio
 
-A minimal, editorial personal website for an independent web developer in Bern.
+My personal webpage
 
 ## Preview locally
 
