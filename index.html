@@ -14,21 +14,24 @@
       content="Design-led development for identities, portfolios and digital products."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/images/study-atelier.webp" />
+    <meta property="og:url" content="https://lazrm.com/" />
+    <meta property="og:image" content="https://lazrm.com/assets/images/projects/apex-motorsport.webp" />
     <title>Lazar Minkov — Web Developer in Bern</title>
+    <link rel="canonical" href="https://lazrm.com/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="assets/fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script src="translations.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body data-page="home">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 
     <div class="loader" aria-hidden="true">
       <div class="loader__mark">LM<sup>26</sup></div>
       <div class="loader__track"><span></span></div>
-      <p>Bern, Switzerland</p>
+      <p data-i18n="home.loader">Bern, Switzerland</p>
     </div>
 
     <div class="page-wipe" aria-hidden="true"></div>
@@ -45,51 +48,63 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#home" data-nav="home"><span>01</span>Home</a>
-        <a href="#about" data-nav="about"><span>02</span>About</a>
-        <a href="#portfolio" data-nav="portfolio"><span>03</span>Portfolio</a>
-        <a href="#contact" data-nav="contact"><span>04</span>Contact</a>
-        <a href="blog.html"><span>05</span>Blog</a>
+        <a href="#home" data-nav="home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
+        <a href="#about" data-nav="about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
+        <a href="#portfolio" data-nav="portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
+        <a href="#contact" data-nav="contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
+        <a href="blog.html"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
       </nav>
 
       <div class="header-meta">
         <span>Bern, CH</span>
         <span class="bern-time" aria-label="Current time in Bern">--:--</span>
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="common.languageLabel">
+          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <span>/</span>
+          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+        </div>
       </div>
 
       <button class="menu-toggle magnetic" type="button" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="menu-toggle__text">Menu</span>
+        <span class="menu-toggle__text" data-i18n="common.menu">Menu</span>
         <span class="menu-toggle__dot" aria-hidden="true"></span>
       </button>
     </header>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <div class="mobile-menu__top">
-        <span>Navigation</span>
-        <span>Bern — CH</span>
+        <span data-i18n="common.navigation">Navigation</span>
+        <div class="mobile-language">
+          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <span>/</span>
+          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+        </div>
       </div>
       <nav aria-label="Mobile navigation">
-        <a href="#home"><span>01</span>Home</a>
-        <a href="#about"><span>02</span>About</a>
-        <a href="#portfolio"><span>03</span>Portfolio</a>
-        <a href="#contact"><span>04</span>Contact</a>
-        <a href="blog.html"><span>05</span>Blog</a>
+        <a href="#home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
+        <a href="#about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
+        <a href="#portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
+        <a href="#contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
+        <a href="blog.html"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
       </nav>
       <div class="mobile-menu__footer">
-        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram ↗</a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram ↗</a>
       </div>
     </div>
 
     <main id="main">
       <section class="hero section-light" id="home" data-section="home">
         <div class="hero__eyebrow reveal">
-          <p>Independent web developer</p>
-          <p>Designing from Bern, Switzerland</p>
+          <p data-i18n="home.hero.eyebrow1">Web developer &amp; UI/UX designer</p>
+          <p data-i18n="home.hero.eyebrow2">Designing from Bern, Switzerland</p>
         </div>
 
-        <h1 class="hero__title" aria-label="Web experiences with a point of view">
+        <h1
+          class="hero__title"
+          data-i18n-html="home.hero.title"
+        >
           <span class="title-line"><span>Web experiences</span></span>
           <span class="title-line title-line--offset"><span>with a <em>point</em></span></span>
           <span class="title-line"><span>of view.</span></span>
@@ -97,11 +112,13 @@
 
         <div class="hero__lower reveal">
           <p class="hero__intro">
-            I pair strategic design with precise development to make websites that feel clear,
-            human and impossible to confuse with a template.
+            <span data-i18n="home.hero.intro">
+              I combine strategic design, precise development and thoughtful motion to create
+              digital experiences with character.
+            </span>
           </p>
           <a class="round-link magnetic" href="#portfolio" data-cursor="Scroll">
-            <span>Selected<br />work</span>
+            <span data-i18n-html="home.hero.selected">Selected<br />work</span>
             <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -114,62 +131,118 @@
 
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span>Design direction</span><i>✳</i>
-          <span>Creative development</span><i>✳</i>
-          <span>Interaction & motion</span><i>✳</i>
-          <span>Based in Bern</span><i>✳</i>
-          <span>Design direction</span><i>✳</i>
-          <span>Creative development</span><i>✳</i>
-          <span>Interaction & motion</span><i>✳</i>
-          <span>Based in Bern</span><i>✳</i>
+          <span data-i18n="home.marquee.design">Design direction</span><i>✳</i>
+          <span data-i18n="home.marquee.development">Creative development</span><i>✳</i>
+          <span data-i18n="home.marquee.motion">Interaction &amp; motion</span><i>✳</i>
+          <span data-i18n="home.marquee.bern">Based in Bern</span><i>✳</i>
+          <span data-i18n="home.marquee.design">Design direction</span><i>✳</i>
+          <span data-i18n="home.marquee.development">Creative development</span><i>✳</i>
+          <span data-i18n="home.marquee.motion">Interaction &amp; motion</span><i>✳</i>
+          <span data-i18n="home.marquee.bern">Based in Bern</span><i>✳</i>
         </div>
       </div>
 
       <section class="about section-bone" id="about" data-section="about">
         <div class="section-heading reveal">
           <span class="section-number">02</span>
-          <p>About / Approach</p>
-          <p class="section-heading__side">Digital craft, without the theatre.</p>
+          <p data-i18n="home.about.kicker">About / Approach</p>
+          <p class="section-heading__side" data-i18n="home.about.side">
+            Digital craft, without the theatre.
+          </p>
         </div>
 
         <div class="about__statement reveal">
-          <p class="serif-statement">
-            Small on <em>footprint</em>,<br />
-            large on feeling.
+          <p class="serif-statement" data-i18n-html="home.about.statement">
+            Small on <em>footprint</em>,<br />large on feeling.
           </p>
         </div>
 
         <div class="about__grid">
           <div class="about__bio reveal">
-            <p class="label">Profile</p>
-            <p>
-              I’m Lazar, a web developer working where visual identity, interface design and
-              front-end engineering overlap. I help thoughtful people and brands turn a clear
-              idea into a memorable, fast and maintainable web experience.
+            <p class="label" data-i18n="home.about.profile">Profile</p>
+            <p data-i18n="home.about.bio1">
+              I’m Lazar, a web developer and UI/UX designer working where visual identity,
+              interface design and front-end engineering overlap.
             </p>
-            <p>
-              My process is direct: understand the story, find the useful tension, then build
-              only what makes that idea stronger.
+            <p data-i18n="home.about.bio2">
+              My background in customer-facing technology and automotive sales keeps the work
+              practical: clear goals, direct communication and digital products that people can
+              actually use.
             </p>
           </div>
 
           <div class="about__services reveal">
-            <p class="label">What I do</p>
+            <p class="label" data-i18n="home.about.services">What I do</p>
             <ol>
-              <li><span>01</span><p>Art direction & UI/UX</p></li>
-              <li><span>02</span><p>Creative development</p></li>
-              <li><span>03</span><p>Motion & interaction</p></li>
-              <li><span>04</span><p>Design systems & CMS</p></li>
+              <li><span>01</span><p data-i18n="home.about.service1">Art direction &amp; UI/UX</p></li>
+              <li><span>02</span><p data-i18n="home.about.service2">Front-end &amp; full-stack development</p></li>
+              <li><span>03</span><p data-i18n="home.about.service3">Motion &amp; interaction</p></li>
+              <li><span>04</span><p data-i18n="home.about.service4">E-commerce &amp; digital products</p></li>
             </ol>
           </div>
 
           <div class="about__facts reveal">
-            <p class="label">In short</p>
+            <p class="label" data-i18n="home.about.facts">In short</p>
             <dl>
-              <dt>Based</dt><dd>Bern, CH</dd>
-              <dt>Focus</dt><dd>Web & digital</dd>
-              <dt>Available</dt><dd><span class="status-dot"></span> Select projects</dd>
+              <dt data-i18n="home.about.based">Based</dt>
+              <dd data-i18n="home.about.basedValue">Bern, CH</dd>
+              <dt data-i18n="home.about.focus">Focus</dt>
+              <dd data-i18n="home.about.focusValue">Web &amp; digital</dd>
+              <dt data-i18n="home.about.credential">Diploma</dt>
+              <dd data-i18n="home.about.credentialValue">SAE Webdesign &amp; Development</dd>
+              <dt data-i18n="home.about.available">Available</dt>
+              <dd><span class="status-dot"></span><span data-i18n="home.about.availableValue">Select projects</span></dd>
             </dl>
+          </div>
+        </div>
+
+        <div class="background-block">
+          <div class="section-heading reveal">
+            <span class="section-number">CV</span>
+            <p data-i18n="home.background.kicker">Selected background</p>
+            <p class="section-heading__side" data-i18n="home.background.side">
+              Design knowledge meets commercial experience.
+            </p>
+          </div>
+
+          <div class="background-block__intro reveal">
+            <h2 data-i18n-html="home.background.title">Built across<br /><em>disciplines.</em></h2>
+            <p>HTML / CSS / JavaScript / TypeScript / Next.js / PHP / Laravel / REST APIs</p>
+          </div>
+
+          <div class="experience-list">
+            <article class="experience reveal">
+              <span data-i18n="home.background.item1.date">2023 — 2027</span>
+              <h3 data-i18n="home.background.item1.title">SAE Institute Zürich</h3>
+              <p data-i18n="home.background.item1.text">
+                Bachelor studies focused on business, marketing, project management, web
+                development and UI/UX design.
+              </p>
+            </article>
+            <article class="experience reveal">
+              <span data-i18n="home.background.item2.date">Awarded 2025</span>
+              <h3 data-i18n="home.background.item2.title">SAE Diploma</h3>
+              <p data-i18n="home.background.item2.text">
+                Webdesign &amp; Development — responsive design, accessibility, JavaScript, APIs,
+                back-end fundamentals and usability testing.
+              </p>
+            </article>
+            <article class="experience reveal">
+              <span data-i18n="home.background.item3.date">2023 — 2025</span>
+              <h3 data-i18n="home.background.item3.title">Project Neptun, ETH Zürich</h3>
+              <p data-i18n="home.background.item3.text">
+                Technical support and customer consultation across Microsoft, HP, Lenovo and
+                Apple hardware.
+              </p>
+            </article>
+            <article class="experience reveal">
+              <span data-i18n="home.background.item4.date">2025 — 2026</span>
+              <h3 data-i18n="home.background.item4.title">Automotive sales &amp; operations</h3>
+              <p data-i18n="home.background.item4.text">
+                Sales strategy, customer consulting, financing and vehicle coordination in the
+                Bern region.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -177,111 +250,211 @@
       <section class="portfolio section-dark" id="portfolio" data-section="portfolio">
         <div class="section-heading section-heading--dark reveal">
           <span class="section-number">03</span>
-          <p>Selected visual studies</p>
-          <p class="section-heading__side">Direction / Interaction / Build</p>
+          <p data-i18n="home.portfolio.kicker">Selected client work</p>
+          <p class="section-heading__side" data-i18n="home.portfolio.side">
+            Direction / Interaction / Build
+          </p>
         </div>
 
         <div class="portfolio__intro reveal">
-          <h2>Ideas need<br /><em>form.</em></h2>
-          <p>
-            Three self-initiated studies exploring the balance between editorial identity and
-            functional interface systems.
+          <h2 data-i18n-html="home.portfolio.title">Work with<br /><em>traction.</em></h2>
+          <p data-i18n="home.portfolio.intro">
+            Four live projects across automotive, gaming, photography and specialist e-commerce —
+            each shaped around a distinct audience and business goal.
           </p>
         </div>
 
         <div class="projects">
           <article class="project reveal">
-            <a class="project__media" href="#contact" data-cursor="Discuss">
+            <a
+              class="project__media"
+              href="https://dinero2004-apex-motorsport-deal-git-73afaf-dinero2004s-projects.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="Visit"
+            >
               <img
-                src="assets/images/study-atelier.webp"
-                alt="Abstract black architectural forms and a translucent bone panel"
-                width="1536"
-                height="1024"
+                src="assets/images/projects/apex-motorsport.webp"
+                alt="Apex Motorsport digital showroom displaying a red sports car"
+                width="1512"
+                height="640"
                 loading="lazy"
               />
-              <span class="project__tag">Independent study</span>
+              <span class="project__tag" data-i18n="home.portfolio.apex.tag">Digital showroom</span>
             </a>
             <div class="project__meta">
               <div>
-                <span>01 / 03</span>
-                <h3>Atelier</h3>
+                <span>01 / 04</span>
+                <h3>Apex Motorsport</h3>
               </div>
-              <p>Art direction, portfolio system, motion language</p>
-              <span class="project__year">2026</span>
+              <p>
+                <span data-i18n="home.portfolio.apex.description">
+                  UI/UX, front-end and motion for a curated sports and luxury car platform.
+                </span>
+                <a
+                  class="project__action"
+                  href="https://dinero2004-apex-motorsport-deal-git-73afaf-dinero2004s-projects.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                ><span data-i18n="common.visitProject">Visit project</span> ↗</a>
+              </p>
+              <span class="project__year" data-i18n="common.live">Live</span>
             </div>
           </article>
 
           <article class="project project--narrow reveal">
-            <a class="project__media" href="#contact" data-cursor="Discuss">
+            <a
+              class="project__media"
+              href="https://store.steampowered.com/app/4329460/30_Mikes_Til_Extraction/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="Visit"
+            >
               <img
-                src="assets/images/study-rhythm.webp"
-                alt="Tactile cream and bone paper geometry on a black field"
-                width="1536"
-                height="1024"
+                src="assets/images/projects/30-mikes.webp"
+                alt="Dark first-person gameplay scene from 30 Mikes 'Til Extraction"
+                width="1920"
+                height="1022"
                 loading="lazy"
               />
-              <span class="project__tag">Interface study</span>
+              <span class="project__tag" data-i18n="home.portfolio.mikes.tag">Game release</span>
             </a>
             <div class="project__meta">
               <div>
-                <span>02 / 03</span>
-                <h3>Rhythm</h3>
+                <span>02 / 04</span>
+                <h3>30 Mikes ’Til Extraction</h3>
               </div>
-              <p>Modular design, type system, creative development</p>
-              <span class="project__year">2026</span>
+              <p>
+                <span data-i18n="home.portfolio.mikes.description">
+                  Launch experience for a dark first-person extraction shooter, connected to its
+                  public Steam release.
+                </span>
+                <a
+                  class="project__action"
+                  href="https://store.steampowered.com/app/4329460/30_Mikes_Til_Extraction/"
+                  target="_blank"
+                  rel="noreferrer"
+                ><span data-i18n="common.visitProject">Visit project</span> ↗</a>
+              </p>
+              <span class="project__year" data-i18n="common.live">Live</span>
             </div>
           </article>
 
-          <article class="project reveal">
-            <a class="project__media" href="#contact" data-cursor="Discuss">
+          <article class="project project--kfoto reveal">
+            <a
+              class="project__media"
+              href="https://kfoto.ch/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="Visit"
+            >
               <img
-                src="assets/images/study-relay.webp"
-                alt="Black ribbon passing through a pale rectangular sculptural frame"
-                width="1568"
-                height="1003"
+                src="assets/images/projects/kfoto.webp"
+                alt="KFoto photography studio website in Bern"
+                width="1512"
+                height="640"
                 loading="lazy"
               />
-              <span class="project__tag">Motion study</span>
+              <span class="project__tag" data-i18n="home.portfolio.kfoto.tag">Photography studio</span>
             </a>
             <div class="project__meta">
               <div>
-                <span>03 / 03</span>
-                <h3>Relay</h3>
+                <span>03 / 04</span>
+                <h3>KFoto</h3>
               </div>
-              <p>Interaction concept, creative code, performance</p>
-              <span class="project__year">2026</span>
+              <p>
+                <span data-i18n="home.portfolio.kfoto.description">
+                  Editorial portfolio, filterable gallery and booking journey for a Bern
+                  photographer.
+                </span>
+                <a
+                  class="project__action"
+                  href="https://kfoto.ch/"
+                  target="_blank"
+                  rel="noreferrer"
+                ><span data-i18n="common.visitProject">Visit project</span> ↗</a>
+              </p>
+              <span class="project__year" data-i18n="common.live">Live</span>
+            </div>
+          </article>
+
+          <article class="project project--narrow project--bknives reveal">
+            <a
+              class="project__media"
+              href="https://bknives.com/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="Visit"
+            >
+              <img
+                src="assets/images/projects/bknives.webp"
+                alt="BKnives online shop displaying handcrafted Japanese kitchen knives"
+                width="1280"
+                height="640"
+                loading="lazy"
+              />
+              <span class="project__tag" data-i18n="home.portfolio.bknives.tag">E-commerce</span>
+            </a>
+            <div class="project__meta">
+              <div>
+                <span>04 / 04</span>
+                <h3>BKnives</h3>
+              </div>
+              <p>
+                <span data-i18n="home.portfolio.bknives.description">
+                  Product storytelling and online shopping experience for authentic Japanese
+                  kitchen knives.
+                </span>
+                <a
+                  class="project__action"
+                  href="https://bknives.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                ><span data-i18n="common.visitProject">Visit project</span> ↗</a>
+              </p>
+              <span class="project__year" data-i18n="common.live">Live</span>
             </div>
           </article>
         </div>
 
         <div class="portfolio__footer reveal">
-          <p>Have a project that needs a distinct point of view?</p>
-          <a class="text-link magnetic" href="#contact">Start a conversation <span>↗</span></a>
+          <p data-i18n="home.portfolio.footer">Have a project that needs a distinct point of view?</p>
+          <a class="text-link magnetic" href="#contact">
+            <b data-i18n="home.portfolio.cta">Start a conversation</b> <span>↗</span>
+          </a>
         </div>
       </section>
 
       <section class="principles section-light">
         <div class="section-heading reveal">
           <span class="section-number">04</span>
-          <p>Working principles</p>
-          <p class="section-heading__side">What holds the work together.</p>
+          <p data-i18n="home.principles.kicker">Working principles</p>
+          <p class="section-heading__side" data-i18n="home.principles.side">
+            What holds the work together.
+          </p>
         </div>
 
         <div class="principles__list">
           <article class="principle reveal" data-principle="01">
             <span>01</span>
-            <h3>Clarity before decoration.</h3>
-            <p>Every decision should sharpen the story or improve the experience.</p>
+            <h3 data-i18n="home.principles.one.title">Clarity before decoration.</h3>
+            <p data-i18n="home.principles.one.text">
+              Every decision should sharpen the story or improve the experience.
+            </p>
           </article>
           <article class="principle reveal" data-principle="02">
             <span>02</span>
-            <h3>Motion with a reason.</h3>
-            <p>Animation guides attention, gives feedback and creates rhythm—never delay.</p>
+            <h3 data-i18n="home.principles.two.title">Motion with a reason.</h3>
+            <p data-i18n="home.principles.two.text">
+              Animation guides attention, gives feedback and creates rhythm — never delay.
+            </p>
           </article>
           <article class="principle reveal" data-principle="03">
             <span>03</span>
-            <h3>Details that survive launch.</h3>
-            <p>Responsive, accessible, performant and maintainable are part of the design.</p>
+            <h3 data-i18n="home.principles.three.title">Details that survive launch.</h3>
+            <p data-i18n="home.principles.three.text">
+              Responsive, accessible, performant and maintainable are part of the design.
+            </p>
           </article>
         </div>
       </section>
@@ -289,51 +462,139 @@
       <section class="contact section-bone" id="contact" data-section="contact">
         <div class="section-heading reveal">
           <span class="section-number">05</span>
-          <p>Contact</p>
-          <p class="section-heading__side">Good work starts with a useful conversation.</p>
+          <p data-i18n="home.contact.kicker">Contact</p>
+          <p class="section-heading__side" data-i18n="home.contact.side">
+            Good work starts with a useful conversation.
+          </p>
         </div>
 
         <div class="contact__top reveal">
-          <h2>Let’s make<br /><em>something matter.</em></h2>
-          <a class="contact__email" href="mailto:hello@lazrm.dev" data-cursor="Write">
-            hello@lazrm.dev <span>↗</span>
+          <h2 data-i18n-html="home.contact.title">Let’s make<br /><em>something matter.</em></h2>
+          <a class="contact__email" href="mailto:lazar.minkov@proton.me" data-cursor="Write">
+            lazar.minkov@proton.me <span>↗</span>
           </a>
         </div>
 
         <form class="contact-form reveal" data-contact-form>
           <div class="form-field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Name / Company" required />
+            <label for="name" data-i18n="home.contact.nameLabel">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Name / Company"
+              data-i18n-placeholder="home.contact.namePlaceholder"
+              required
+            />
           </div>
           <div class="form-field">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+            <label for="email" data-i18n="home.contact.emailLabel">Your email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@company.com"
+              data-i18n-placeholder="home.contact.emailPlaceholder"
+              required
+            />
           </div>
           <div class="form-field form-field--wide">
-            <label for="message">A few words about the project</label>
-            <textarea id="message" name="message" rows="2" placeholder="Scope, ambition, timing…" required></textarea>
+            <label for="message" data-i18n="home.contact.messageLabel">
+              A few words about the project
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="2"
+              placeholder="Scope, ambition, timing…"
+              data-i18n-placeholder="home.contact.messagePlaceholder"
+              required
+            ></textarea>
           </div>
           <button class="form-submit magnetic" type="submit">
-            <span>Send enquiry</span>
+            <span data-i18n="home.contact.send">Send enquiry</span>
             <span aria-hidden="true">↗</span>
           </button>
         </form>
+
+        <div class="office reveal">
+          <div class="section-heading">
+            <span class="section-number">MAP</span>
+            <p data-i18n="home.office.kicker">Studio / Office</p>
+            <p class="section-heading__side" data-i18n="home.office.side">Ittigen, Bern</p>
+          </div>
+
+          <div class="office__grid">
+            <div class="office__info">
+              <h2 data-i18n-html="home.office.heading">
+                Let’s meet in<br /><em>the real world.</em>
+              </h2>
+              <dl>
+                <div>
+                  <dt data-i18n="home.office.addressLabel">Address</dt>
+                  <dd>
+                    <address>
+                      Lazar Minkov<br />
+                      Scheunerweg 28<br />
+                      3063 Ittigen, Bern
+                    </address>
+                  </dd>
+                </div>
+                <div>
+                  <dt data-i18n="home.office.emailLabel">Email</dt>
+                  <dd><a href="mailto:lazar.minkov@proton.me">lazar.minkov@proton.me</a></dd>
+                </div>
+                <div>
+                  <dt data-i18n="home.office.phoneLabel">Phone</dt>
+                  <dd><a href="tel:+41782348028">078 234 80 28</a></dd>
+                </div>
+                <div>
+                  <dt data-i18n="home.office.socialLabel">Elsewhere</dt>
+                  <dd class="office__socials">
+                    <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                    <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram ↗</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="office__map">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=7.4705%2C46.9685%2C7.4820%2C46.9748&amp;layer=mapnik&amp;marker=46.971622%2C7.4762739"
+                title="Map showing Scheunerweg 28, 3063 Ittigen"
+                data-i18n-title="home.office.mapTitle"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a
+                href="https://www.openstreetmap.org/?mlat=46.971622&amp;mlon=7.4762739#map=18/46.971622/7.4762739"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="home.office.mapOpen"
+              >Open full map ↗</a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer__brand">
         <p>Lazar<br />Minkov<sup>®</sup></p>
-        <span>Web developer / Bern</span>
+        <span data-i18n="common.footerRole">Web developer / Bern</span>
       </div>
       <nav aria-label="Social links">
-        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+        <a href="imprint.html"><b data-i18n="common.imprint">Imprint</b> <span>↗</span></a>
       </nav>
       <div class="site-footer__meta">
         <p>© <span data-year></span> Lazar Minkov</p>
-        <button type="button" data-back-to-top>Back to top ↑</button>
+        <button type="button" data-back-to-top data-i18n="common.backTop">Back to top ↑</button>
       </div>
     </footer>
   </body>

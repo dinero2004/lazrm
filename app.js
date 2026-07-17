@@ -2,6 +2,88 @@ document.documentElement.classList.add("js");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const body = document.body;
+const translations = window.LAZRM_TRANSLATIONS || {};
+let activeLanguage = "en";
+
+const translate = (key) =>
+  translations[activeLanguage]?.[key] || translations.en?.[key] || key;
+
+const applyLanguage = (language) => {
+  activeLanguage = translations[language] ? language : "en";
+  document.documentElement.lang = activeLanguage;
+  document.documentElement.dataset.language = activeLanguage;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.textContent = translate(element.dataset.i18n);
+  });
+
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    element.innerHTML = translate(element.dataset.i18nHtml);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    element.setAttribute("placeholder", translate(element.dataset.i18nPlaceholder));
+  });
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    element.setAttribute("alt", translate(element.dataset.i18nAlt));
+  });
+
+  document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+    element.setAttribute("title", translate(element.dataset.i18nTitle));
+  });
+
+  document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+    const isActive = button.dataset.langSwitch === activeLanguage;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  const page = body.dataset.page;
+  const title = translations[activeLanguage]?.[`meta.${page}.title`];
+  const description = translations[activeLanguage]?.[`meta.${page}.description`];
+  if (title) document.title = title;
+  if (description) {
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+  }
+
+  const menuLabel = document.querySelector(".menu-toggle__text");
+  if (menuLabel) {
+    menuLabel.textContent = translate(
+      document.querySelector(".mobile-menu")?.classList.contains("is-open")
+        ? "common.close"
+        : "common.menu",
+    );
+  }
+};
+
+const initLanguage = () => {
+  let storedLanguage = "en";
+
+  try {
+    storedLanguage = window.localStorage.getItem("lazrm-language") || "en";
+  } catch {
+    storedLanguage = "en";
+  }
+
+  applyLanguage(storedLanguage);
+
+  document.querySelectorAll("[data-lang-switch]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.langSwitch;
+      try {
+        window.localStorage.setItem("lazrm-language", language);
+      } catch {
+        // Language switching still works when storage is unavailable.
+      }
+      applyLanguage(language);
+    });
+  });
+};
 
 const setPageReady = () => {
   const delay = document.querySelector(".loader") && !prefersReducedMotion ? 1500 : 80;
@@ -111,7 +193,7 @@ const initMenu = () => {
     menu.classList.toggle("is-open", open);
     menu.setAttribute("aria-hidden", String(!open));
     toggle.setAttribute("aria-expanded", String(open));
-    if (label) label.textContent = open ? "Close" : "Menu";
+    if (label) label.textContent = translate(open ? "common.close" : "common.menu");
   };
 
   toggle.addEventListener("click", () => {
@@ -219,12 +301,16 @@ const initContactForm = () => {
     const name = String(data.get("name") || "");
     const email = String(data.get("email") || "");
     const message = String(data.get("message") || "");
-    const subject = encodeURIComponent(`Project enquiry from ${name}`);
+    const subject = encodeURIComponent(
+      activeLanguage === "de" ? `Projektanfrage von ${name}` : `Project enquiry from ${name}`,
+    );
     const bodyText = encodeURIComponent(
-      `Hi Lazar,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`,
+      activeLanguage === "de"
+        ? `Hallo Lazar,\n\n${message}\n\nVon: ${name}\nE-Mail: ${email}`
+        : `Hi Lazar,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`,
     );
 
-    window.location.href = `mailto:hello@lazrm.dev?subject=${subject}&body=${bodyText}`;
+    window.location.href = `mailto:lazar.minkov@proton.me?subject=${subject}&body=${bodyText}`;
   });
 };
 
@@ -284,6 +370,7 @@ const initUtilities = () => {
   });
 };
 
+initLanguage();
 setPageReady();
 updateClock();
 window.setInterval(updateClock, 1000);

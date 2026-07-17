@@ -9,14 +9,16 @@
     />
     <meta name="theme-color" content="#F5F1E9" />
     <title>Journal — Lazar Minkov</title>
+    <link rel="canonical" href="https://lazrm.com/blog.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="assets/fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="stylesheet" href="styles.css" />
+    <script src="translations.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body data-page="blog">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 
     <div class="page-wipe" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
@@ -29,54 +31,63 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html#home"><span>01</span>Home</a>
-        <a href="index.html#about"><span>02</span>About</a>
-        <a href="index.html#portfolio"><span>03</span>Portfolio</a>
-        <a href="index.html#contact"><span>04</span>Contact</a>
-        <a href="blog.html" class="is-active"><span>05</span>Blog</a>
+        <a href="index.html#home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
+        <a href="index.html#about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
+        <a href="index.html#portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
+        <a href="index.html#contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
+        <a href="blog.html" class="is-active"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
       </nav>
 
       <div class="header-meta">
         <span>Bern, CH</span>
         <span class="bern-time" aria-label="Current time in Bern">--:--</span>
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="common.languageLabel">
+          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <span>/</span>
+          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+        </div>
       </div>
 
       <button class="menu-toggle magnetic" type="button" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="menu-toggle__text">Menu</span>
+        <span class="menu-toggle__text" data-i18n="common.menu">Menu</span>
         <span class="menu-toggle__dot" aria-hidden="true"></span>
       </button>
     </header>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <div class="mobile-menu__top">
-        <span>Navigation</span>
-        <span>Bern — CH</span>
+        <span data-i18n="common.navigation">Navigation</span>
+        <div class="mobile-language">
+          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <span>/</span>
+          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+        </div>
       </div>
       <nav aria-label="Mobile navigation">
-        <a href="index.html#home"><span>01</span>Home</a>
-        <a href="index.html#about"><span>02</span>About</a>
-        <a href="index.html#portfolio"><span>03</span>Portfolio</a>
-        <a href="index.html#contact"><span>04</span>Contact</a>
-        <a href="blog.html"><span>05</span>Blog</a>
+        <a href="index.html#home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
+        <a href="index.html#about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
+        <a href="index.html#portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
+        <a href="index.html#contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
+        <a href="blog.html"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
       </nav>
       <div class="mobile-menu__footer">
-        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram ↗</a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram ↗</a>
       </div>
     </div>
 
     <main id="main">
       <section class="journal-hero section-light">
         <div class="journal-hero__meta reveal">
-          <span>Journal / 2026</span>
-          <span>Design · Development · Culture</span>
+          <span data-i18n="blog.hero.meta1">Journal / 2026</span>
+          <span data-i18n="blog.hero.meta2">Design · Development · Culture</span>
         </div>
-        <h1 class="journal-hero__title">
+        <h1 class="journal-hero__title" data-i18n-html="blog.hero.title">
           <span class="title-line"><span>Notes from</span></span>
           <span class="title-line title-line--offset"><span>the <em>margin.</em></span></span>
         </h1>
-        <p class="journal-hero__intro reveal">
+        <p class="journal-hero__intro reveal" data-i18n="blog.hero.intro">
           Short observations on building the web with more character, less noise and a healthy
           respect for the people on the other side of the screen.
         </p>
@@ -85,28 +96,30 @@
       <section class="journal section-bone" aria-labelledby="journal-heading">
         <div class="section-heading reveal">
           <span class="section-number">01</span>
-          <p id="journal-heading">Latest notes</p>
-          <p class="section-heading__side">Open an entry to read.</p>
+          <p id="journal-heading" data-i18n="blog.latest">Latest notes</p>
+          <p class="section-heading__side" data-i18n="blog.latestSide">Open an entry to read.</p>
         </div>
 
         <div class="journal-list">
           <details class="journal-entry reveal" id="motion-that-earns-its-place">
             <summary data-cursor="Read">
               <span class="journal-entry__number">001</span>
-              <span class="journal-entry__title">Motion that earns its place</span>
+              <span class="journal-entry__title" data-i18n="blog.entry1.title">
+                Motion that earns its place
+              </span>
               <span class="journal-entry__date">11.06.2026</span>
               <span class="journal-entry__toggle" aria-hidden="true">+</span>
             </summary>
             <div class="journal-entry__body">
-              <p class="journal-entry__lead">
+              <p class="journal-entry__lead" data-i18n="blog.entry1.lead">
                 Good motion does not ask to be watched. It helps you understand what changed.
               </p>
-              <p>
+              <p data-i18n="blog.entry1.p1">
                 The strongest interface animation often lives in the space between two states:
                 a menu remembers where it came from, a card keeps its visual position as it
                 opens, or a form confirms an action before the user has time to wonder.
               </p>
-              <p>
+              <p data-i18n="blog.entry1.p2">
                 I start with three questions: What needs attention? What relationship is being
                 explained? How quickly can the interaction get out of the way? If there is no
                 useful answer, the element probably does not need to move.
@@ -117,21 +130,23 @@
           <details class="journal-entry reveal" id="the-case-for-fewer-components">
             <summary data-cursor="Read">
               <span class="journal-entry__number">002</span>
-              <span class="journal-entry__title">The case for fewer components</span>
+              <span class="journal-entry__title" data-i18n="blog.entry2.title">
+                The case for fewer components
+              </span>
               <span class="journal-entry__date">26.05.2026</span>
               <span class="journal-entry__toggle" aria-hidden="true">+</span>
             </summary>
             <div class="journal-entry__body">
-              <p class="journal-entry__lead">
+              <p class="journal-entry__lead" data-i18n="blog.entry2.lead">
                 A design system is useful when it protects an idea—not when it catalogs every
                 possible rectangle.
               </p>
-              <p>
+              <p data-i18n="blog.entry2.p1">
                 Early abstraction can turn a clear visual direction into an inventory exercise.
                 I prefer to build the real pages first, notice the patterns that survive, then
                 extract only the components that reduce future decisions.
               </p>
-              <p>
+              <p data-i18n="blog.entry2.p2">
                 The result is usually a smaller system with stronger rules: a type scale, a
                 rhythm, a few spatial behaviors and components that have already proved their
                 value in context.
@@ -142,22 +157,24 @@
           <details class="journal-entry reveal" id="why-the-first-screen-is-not-a-poster">
             <summary data-cursor="Read">
               <span class="journal-entry__number">003</span>
-              <span class="journal-entry__title">The first screen is not a poster</span>
+              <span class="journal-entry__title" data-i18n="blog.entry3.title">
+                The first screen is not a poster
+              </span>
               <span class="journal-entry__date">04.04.2026</span>
               <span class="journal-entry__toggle" aria-hidden="true">+</span>
             </summary>
             <div class="journal-entry__body">
-              <p class="journal-entry__lead">
+              <p class="journal-entry__lead" data-i18n="blog.entry3.lead">
                 A hero can be expressive and still tell someone where they are, why it matters
                 and where to go next.
               </p>
-              <p>
+              <p data-i18n="blog.entry3.p1">
                 The temptation is to spend the entire opening view on a sentence set at the
                 largest possible size. The better challenge is compositional: balance character
                 with orientation, tension with reading order, and theatre with an obvious path
                 forward.
               </p>
-              <p>
+              <p data-i18n="blog.entry3.p2">
                 When the hierarchy is right, the screen feels inevitable. The visitor does not
                 have to decode the interface before they can enjoy it.
               </p>
@@ -167,11 +184,11 @@
       </section>
 
       <section class="journal-cta section-dark">
-        <p class="label reveal">End note</p>
+        <p class="label reveal" data-i18n="blog.endnote">End note</p>
         <div class="journal-cta__inner reveal">
-          <h2>Have a thought<br />worth <em>building?</em></h2>
+          <h2 data-i18n-html="blog.ctaTitle">Have a thought<br />worth <em>building?</em></h2>
           <a class="round-link round-link--light magnetic" href="index.html#contact">
-            <span>Start a<br />conversation</span>
+            <span data-i18n-html="blog.cta">Start a<br />conversation</span>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -181,16 +198,17 @@
     <footer class="site-footer">
       <div class="site-footer__brand">
         <p>Lazar<br />Minkov<sup>®</sup></p>
-        <span>Web developer / Bern</span>
+        <span data-i18n="common.footerRole">Web developer / Bern</span>
       </div>
       <nav aria-label="Social links">
-        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+        <a href="imprint.html"><b data-i18n="common.imprint">Imprint</b> <span>↗</span></a>
       </nav>
       <div class="site-footer__meta">
         <p>© <span data-year></span> Lazar Minkov</p>
-        <button type="button" data-back-to-top>Back to top ↑</button>
+        <button type="button" data-back-to-top data-i18n="common.backTop">Back to top ↑</button>
       </div>
     </footer>
   </body>
