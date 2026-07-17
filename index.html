@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lazar Minkov is an independent web developer in Bern, Switzerland, creating distinctive websites with precise code and thoughtful motion."
+    />
+    <meta name="theme-color" content="#F5F1E9" />
+    <meta property="og:title" content="Lazar Minkov — Web Developer, Bern" />
+    <meta
+      property="og:description"
+      content="Design-led development for identities, portfolios and digital products."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/study-atelier.webp" />
+    <title>Lazar Minkov — Web Developer in Bern</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="loader" aria-hidden="true">
+      <div class="loader__mark">LM<sup>26</sup></div>
+      <div class="loader__track"><span></span></div>
+      <p>Bern, Switzerland</p>
+    </div>
+
+    <div class="page-wipe" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand magnetic" href="#home" aria-label="Lazar Minkov, back to home">
+        <span>LM</span><sup>26</sup>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#home" data-nav="home"><span>01</span>Home</a>
+        <a href="#about" data-nav="about"><span>02</span>About</a>
+        <a href="#portfolio" data-nav="portfolio"><span>03</span>Portfolio</a>
+        <a href="#contact" data-nav="contact"><span>04</span>Contact</a>
+        <a href="blog.html"><span>05</span>Blog</a>
+      </nav>
+
+      <div class="header-meta">
+        <span>Bern, CH</span>
+        <span class="bern-time" aria-label="Current time in Bern">--:--</span>
+      </div>
+
+      <button class="menu-toggle magnetic" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle__text">Menu</span>
+        <span class="menu-toggle__dot" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__top">
+        <span>Navigation</span>
+        <span>Bern — CH</span>
+      </div>
+      <nav aria-label="Mobile navigation">
+        <a href="#home"><span>01</span>Home</a>
+        <a href="#about"><span>02</span>About</a>
+        <a href="#portfolio"><span>03</span>Portfolio</a>
+        <a href="#contact"><span>04</span>Contact</a>
+        <a href="blog.html"><span>05</span>Blog</a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram ↗</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero section-light" id="home" data-section="home">
+        <div class="hero__eyebrow reveal">
+          <p>Independent web developer</p>
+          <p>Designing from Bern, Switzerland</p>
+        </div>
+
+        <h1 class="hero__title" aria-label="Web experiences with a point of view">
+          <span class="title-line"><span>Web experiences</span></span>
+          <span class="title-line title-line--offset"><span>with a <em>point</em></span></span>
+          <span class="title-line"><span>of view.</span></span>
+        </h1>
+
+        <div class="hero__lower reveal">
+          <p class="hero__intro">
+            I pair strategic design with precise development to make websites that feel clear,
+            human and impossible to confuse with a template.
+          </p>
+          <a class="round-link magnetic" href="#portfolio" data-cursor="Scroll">
+            <span>Selected<br />work</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="hero__index" aria-hidden="true">
+          <span>(01)</span>
+          <span>46.9480° N</span>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Design direction</span><i>✳</i>
+          <span>Creative development</span><i>✳</i>
+          <span>Interaction & motion</span><i>✳</i>
+          <span>Based in Bern</span><i>✳</i>
+          <span>Design direction</span><i>✳</i>
+          <span>Creative development</span><i>✳</i>
+          <span>Interaction & motion</span><i>✳</i>
+          <span>Based in Bern</span><i>✳</i>
+        </div>
+      </div>
+
+      <section class="about section-bone" id="about" data-section="about">
+        <div class="section-heading reveal">
+          <span class="section-number">02</span>
+          <p>About / Approach</p>
+          <p class="section-heading__side">Digital craft, without the theatre.</p>
+        </div>
+
+        <div class="about__statement reveal">
+          <p class="serif-statement">
+            Small on <em>footprint</em>,<br />
+            large on feeling.
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__bio reveal">
+            <p class="label">Profile</p>
+            <p>
+              I’m Lazar, a web developer working where visual identity, interface design and
+              front-end engineering overlap. I help thoughtful people and brands turn a clear
+              idea into a memorable, fast and maintainable web experience.
+            </p>
+            <p>
+              My process is direct: understand the story, find the useful tension, then build
+              only what makes that idea stronger.
+            </p>
+          </div>
+
+          <div class="about__services reveal">
+            <p class="label">What I do</p>
+            <ol>
+              <li><span>01</span><p>Art direction & UI/UX</p></li>
+              <li><span>02</span><p>Creative development</p></li>
+              <li><span>03</span><p>Motion & interaction</p></li>
+              <li><span>04</span><p>Design systems & CMS</p></li>
+            </ol>
+          </div>
+
+          <div class="about__facts reveal">
+            <p class="label">In short</p>
+            <dl>
+              <dt>Based</dt><dd>Bern, CH</dd>
+              <dt>Focus</dt><dd>Web & digital</dd>
+              <dt>Available</dt><dd><span class="status-dot"></span> Select projects</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section-dark" id="portfolio" data-section="portfolio">
+        <div class="section-heading section-heading--dark reveal">
+          <span class="section-number">03</span>
+          <p>Selected visual studies</p>
+          <p class="section-heading__side">Direction / Interaction / Build</p>
+        </div>
+
+        <div class="portfolio__intro reveal">
+          <h2>Ideas need<br /><em>form.</em></h2>
+          <p>
+            Three self-initiated studies exploring the balance between editorial identity and
+            functional interface systems.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <a class="project__media" href="#contact" data-cursor="Discuss">
+              <img
+                src="assets/images/study-atelier.webp"
+                alt="Abstract black architectural forms and a translucent bone panel"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <span class="project__tag">Independent study</span>
+            </a>
+            <div class="project__meta">
+              <div>
+                <span>01 / 03</span>
+                <h3>Atelier</h3>
+              </div>
+              <p>Art direction, portfolio system, motion language</p>
+              <span class="project__year">2026</span>
+            </div>
+          </article>
+
+          <article class="project project--narrow reveal">
+            <a class="project__media" href="#contact" data-cursor="Discuss">
+              <img
+                src="assets/images/study-rhythm.webp"
+                alt="Tactile cream and bone paper geometry on a black field"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <span class="project__tag">Interface study</span>
+            </a>
+            <div class="project__meta">
+              <div>
+                <span>02 / 03</span>
+                <h3>Rhythm</h3>
+              </div>
+              <p>Modular design, type system, creative development</p>
+              <span class="project__year">2026</span>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <a class="project__media" href="#contact" data-cursor="Discuss">
+              <img
+                src="assets/images/study-relay.webp"
+                alt="Black ribbon passing through a pale rectangular sculptural frame"
+                width="1568"
+                height="1003"
+                loading="lazy"
+              />
+              <span class="project__tag">Motion study</span>
+            </a>
+            <div class="project__meta">
+              <div>
+                <span>03 / 03</span>
+                <h3>Relay</h3>
+              </div>
+              <p>Interaction concept, creative code, performance</p>
+              <span class="project__year">2026</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="portfolio__footer reveal">
+          <p>Have a project that needs a distinct point of view?</p>
+          <a class="text-link magnetic" href="#contact">Start a conversation <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="principles section-light">
+        <div class="section-heading reveal">
+          <span class="section-number">04</span>
+          <p>Working principles</p>
+          <p class="section-heading__side">What holds the work together.</p>
+        </div>
+
+        <div class="principles__list">
+          <article class="principle reveal" data-principle="01">
+            <span>01</span>
+            <h3>Clarity before decoration.</h3>
+            <p>Every decision should sharpen the story or improve the experience.</p>
+          </article>
+          <article class="principle reveal" data-principle="02">
+            <span>02</span>
+            <h3>Motion with a reason.</h3>
+            <p>Animation guides attention, gives feedback and creates rhythm—never delay.</p>
+          </article>
+          <article class="principle reveal" data-principle="03">
+            <span>03</span>
+            <h3>Details that survive launch.</h3>
+            <p>Responsive, accessible, performant and maintainable are part of the design.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section-bone" id="contact" data-section="contact">
+        <div class="section-heading reveal">
+          <span class="section-number">05</span>
+          <p>Contact</p>
+          <p class="section-heading__side">Good work starts with a useful conversation.</p>
+        </div>
+
+        <div class="contact__top reveal">
+          <h2>Let’s make<br /><em>something matter.</em></h2>
+          <a class="contact__email" href="mailto:hello@lazrm.dev" data-cursor="Write">
+            hello@lazrm.dev <span>↗</span>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" data-contact-form>
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Name / Company" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-field form-field--wide">
+            <label for="message">A few words about the project</label>
+            <textarea id="message" name="message" rows="2" placeholder="Scope, ambition, timing…" required></textarea>
+          </div>
+          <button class="form-submit magnetic" type="submit">
+            <span>Send enquiry</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__brand">
+        <p>Lazar<br />Minkov<sup>®</sup></p>
+        <span>Web developer / Bern</span>
+      </div>
+      <nav aria-label="Social links">
+        <a href="https://github.com/lazrm" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/lazrm" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a href="https://www.instagram.com/lazrm" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+      </nav>
+      <div class="site-footer__meta">
+        <p>© <span data-year></span> Lazar Minkov</p>
+        <button type="button" data-back-to-top>Back to top ↑</button>
+      </div>
+    </footer>
+  </body>
+</html>
