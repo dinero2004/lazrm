@@ -8,6 +8,14 @@
       content="Notes on design, development and digital craft by Lazar Minkov, an independent web developer in Bern."
     />
     <meta name="theme-color" content="#11100E" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("lazrm-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch {}
+    </script>
     <title>Journal — Lazar Minkov</title>
     <link rel="canonical" href="https://lazrm.com/blog.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -84,6 +92,16 @@
             DE
           </button>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Switch to light theme"
+        >
+          <span data-theme-label>Light</span>
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
       </div>
 
       <a class="header-cta magnetic" href="index.html#contact">
@@ -114,6 +132,16 @@
             DE
           </button>
         </div>
+        <button
+          class="theme-toggle theme-toggle--mobile"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Switch to light theme"
+        >
+          <span data-theme-label>Light</span>
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
       </div>
       <nav aria-label="Mobile navigation">
         <a href="index.html#home"

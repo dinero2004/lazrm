@@ -8,6 +8,14 @@
       content="Lazar Minkov is an independent web developer in Bern, Switzerland, creating distinctive websites with precise code and thoughtful motion."
     />
     <meta name="theme-color" content="#11100E" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("lazrm-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch {}
+    </script>
     <meta property="og:title" content="Lazar Minkov — Web Developer, Bern" />
     <meta
       property="og:description"
@@ -96,6 +104,16 @@
             DE
           </button>
         </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Switch to light theme"
+        >
+          <span data-theme-label>Light</span>
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
       </div>
 
       <a class="header-cta magnetic" href="#contact">
@@ -126,6 +144,16 @@
             DE
           </button>
         </div>
+        <button
+          class="theme-toggle theme-toggle--mobile"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Switch to light theme"
+        >
+          <span data-theme-label>Light</span>
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
       </div>
       <nav aria-label="Mobile navigation">
         <a href="#home"
@@ -262,14 +290,12 @@
 
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span data-i18n="home.marquee.design">Design direction</span
-          ><i>✳</i>
+          <span data-i18n="home.marquee.design">Design direction</span><i>✳</i>
           <span data-i18n="home.marquee.development">Creative development</span
           ><i>✳</i>
           <span data-i18n="home.marquee.motion">Interaction &amp; motion</span
           ><i>✳</i> <span data-i18n="home.marquee.bern">Based in Bern</span
-          ><i>✳</i>
-          <span data-i18n="home.marquee.design">Design direction</span
+          ><i>✳</i> <span data-i18n="home.marquee.design">Design direction</span
           ><i>✳</i>
           <span data-i18n="home.marquee.development">Creative development</span
           ><i>✳</i>

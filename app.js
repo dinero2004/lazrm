@@ -6,9 +6,55 @@ const prefersReducedMotion = window.matchMedia(
 const body = document.body;
 const translations = window.LAZRM_TRANSLATIONS || {};
 let activeLanguage = "en";
+let activeTheme =
+  document.documentElement.dataset.theme === "light" ? "light" : "dark";
 
 const translate = (key) =>
   translations[activeLanguage]?.[key] || translations.en?.[key] || key;
+
+const updateThemeControls = () => {
+  const isLight = activeTheme === "light";
+  const actionLabel = translate(
+    isLight ? "common.theme.dark" : "common.theme.light",
+  );
+  const accessibleLabel = translate(
+    isLight ? "common.theme.switchToDark" : "common.theme.switchToLight",
+  );
+
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(isLight));
+    button.setAttribute("aria-label", accessibleLabel);
+  });
+
+  document.querySelectorAll("[data-theme-label]").forEach((label) => {
+    label.textContent = actionLabel;
+  });
+};
+
+const applyTheme = (theme) => {
+  activeTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = activeTheme;
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute("content", activeTheme === "light" ? "#F5F1E9" : "#11100E");
+  updateThemeControls();
+};
+
+const initTheme = () => {
+  applyTheme(activeTheme);
+
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextTheme = activeTheme === "light" ? "dark" : "light";
+      try {
+        window.localStorage.setItem("lazrm-theme", nextTheme);
+      } catch {
+        // Theme switching still works when storage is unavailable.
+      }
+      applyTheme(nextTheme);
+    });
+  });
+};
 
 const applyLanguage = (language) => {
   activeLanguage = translations[language] ? language : "en";
@@ -70,6 +116,8 @@ const applyLanguage = (language) => {
         : "common.menu",
     );
   }
+
+  updateThemeControls();
 
   window.dispatchEvent(
     new CustomEvent("lazrm:languagechange", {
@@ -412,6 +460,7 @@ const initUtilities = () => {
   });
 };
 
+initTheme();
 initLanguage();
 setPageReady();
 updateClock();
