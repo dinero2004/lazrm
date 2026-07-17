@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Notes on design, development and digital craft by Lazar Minkov, an independent web developer in Bern."
+      content="A selected web design and development case study by Lazar Minkov."
     />
     <meta name="theme-color" content="#11100E" />
-    <title>Journal — Lazar Minkov</title>
-    <link rel="canonical" href="https://lazrm.com/blog.html" />
+    <meta property="og:type" content="article" />
+    <title>Case study — Lazar Minkov</title>
+    <link rel="canonical" href="https://lazrm.com/case-study.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,9 +27,10 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="translations.js" defer></script>
+    <script src="case-studies.js" defer></script>
     <script src="app.js" defer></script>
   </head>
-  <body data-page="blog">
+  <body data-page="case">
     <a class="skip-link" href="#main" data-i18n="common.skip"
       >Skip to content</a
     >
@@ -56,13 +58,13 @@
         <a href="index.html#about"
           ><span>02</span><b data-i18n="common.nav.about">About</b></a
         >
-        <a href="index.html#portfolio"
+        <a href="index.html#portfolio" class="is-active"
           ><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a
         >
         <a href="index.html#contact"
           ><span>04</span><b data-i18n="common.nav.contact">Contact</b></a
         >
-        <a href="blog.html" class="is-active"
+        <a href="blog.html"
           ><span>05</span><b data-i18n="common.nav.blog">Blog</b></a
         >
       </nav>
@@ -156,145 +158,179 @@
     </div>
 
     <main id="main">
-      <section class="journal-hero section-light">
-        <div class="journal-hero__meta reveal">
-          <span data-i18n="blog.hero.meta1">Journal / 2026</span>
-          <span data-i18n="blog.hero.meta2"
-            >Design · Development · Culture</span
+      <section class="case-hero section-light">
+        <div class="case-hero__top reveal">
+          <a href="index.html#portfolio" data-case-label="back"
+            >← Selected projects</a
           >
+          <span data-case-kind>Project</span>
+          <span data-case-year>2026</span>
         </div>
-        <h1 class="journal-hero__title" data-i18n-html="blog.hero.title">
-          <span class="title-line"><span>Notes from</span></span>
-          <span class="title-line title-line--offset"
-            ><span>the <em>margin.</em></span></span
-          >
-        </h1>
-        <p class="journal-hero__intro reveal" data-i18n="blog.hero.intro">
-          Short observations on building the web with more character, less noise
-          and a healthy respect for the people on the other side of the screen.
-        </p>
+        <div class="case-hero__heading">
+          <p class="case-hero__category reveal" data-case-category>Category</p>
+          <h1 class="case-hero__title reveal" data-case-title>Case study</h1>
+          <p class="case-hero__summary reveal" data-case-summary></p>
+        </div>
+        <div class="case-hero__facts reveal">
+          <article>
+            <span data-case-label="role">Role</span>
+            <p data-case-role></p>
+          </article>
+          <article>
+            <span data-case-label="technology">Technology</span>
+            <p data-case-technology></p>
+          </article>
+          <article>
+            <span data-case-label="status">Status</span>
+            <p data-case-status></p>
+          </article>
+        </div>
       </section>
 
-      <section class="journal section-bone" aria-labelledby="journal-heading">
+      <section
+        class="case-media section-dark"
+        aria-label="Project overview image"
+      >
+        <div class="case-media__frame reveal">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <p data-case-domain>Selected project</p>
+            <b data-case-year>2026</b>
+          </div>
+          <img
+            data-case-image
+            src="assets/images/projects/apex-motorsport.webp"
+            alt=""
+            width="1512"
+            height="640"
+          />
+        </div>
+      </section>
+
+      <section class="case-overview section-bone">
         <div class="section-heading reveal">
           <span class="section-number">01</span>
-          <p id="journal-heading" data-i18n="blog.latest">Latest notes</p>
-          <p class="section-heading__side" data-i18n="blog.latestSide">
-            Open an entry to read.
+          <p data-case-label="overview">Project overview</p>
+          <p class="section-heading__side" data-case-label="overviewSide">
+            Context / Process / Outcome
           </p>
         </div>
-
-        <div class="journal-list">
-          <details
-            class="journal-entry reveal"
-            id="motion-that-earns-its-place"
-          >
-            <summary data-cursor="Read">
-              <span class="journal-entry__number">001</span>
-              <span class="journal-entry__title" data-i18n="blog.entry1.title">
-                Motion that earns its place
-              </span>
-              <span class="journal-entry__date">11.06.2026</span>
-              <span class="journal-entry__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="journal-entry__body">
-              <p class="journal-entry__lead" data-i18n="blog.entry1.lead">
-                Good motion does not ask to be watched. It helps you understand
-                what changed.
-              </p>
-              <p data-i18n="blog.entry1.p1">
-                The strongest interface animation often lives in the space
-                between two states: a menu remembers where it came from, a card
-                keeps its visual position as it opens, or a form confirms an
-                action before the user has time to wonder.
-              </p>
-              <p data-i18n="blog.entry1.p2">
-                I start with three questions: What needs attention? What
-                relationship is being explained? How quickly can the interaction
-                get out of the way? If there is no useful answer, the element
-                probably does not need to move.
-              </p>
-            </div>
-          </details>
-
-          <details
-            class="journal-entry reveal"
-            id="the-case-for-fewer-components"
-          >
-            <summary data-cursor="Read">
-              <span class="journal-entry__number">002</span>
-              <span class="journal-entry__title" data-i18n="blog.entry2.title">
-                The case for fewer components
-              </span>
-              <span class="journal-entry__date">26.05.2026</span>
-              <span class="journal-entry__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="journal-entry__body">
-              <p class="journal-entry__lead" data-i18n="blog.entry2.lead">
-                A design system is useful when it protects an idea—not when it
-                catalogs every possible rectangle.
-              </p>
-              <p data-i18n="blog.entry2.p1">
-                Early abstraction can turn a clear visual direction into an
-                inventory exercise. I prefer to build the real pages first,
-                notice the patterns that survive, then extract only the
-                components that reduce future decisions.
-              </p>
-              <p data-i18n="blog.entry2.p2">
-                The result is usually a smaller system with stronger rules: a
-                type scale, a rhythm, a few spatial behaviors and components
-                that have already proved their value in context.
-              </p>
-            </div>
-          </details>
-
-          <details
-            class="journal-entry reveal"
-            id="why-the-first-screen-is-not-a-poster"
-          >
-            <summary data-cursor="Read">
-              <span class="journal-entry__number">003</span>
-              <span class="journal-entry__title" data-i18n="blog.entry3.title">
-                The first screen is not a poster
-              </span>
-              <span class="journal-entry__date">04.04.2026</span>
-              <span class="journal-entry__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="journal-entry__body">
-              <p class="journal-entry__lead" data-i18n="blog.entry3.lead">
-                A hero can be expressive and still tell someone where they are,
-                why it matters and where to go next.
-              </p>
-              <p data-i18n="blog.entry3.p1">
-                The temptation is to spend the entire opening view on a sentence
-                set at the largest possible size. The better challenge is
-                compositional: balance character with orientation, tension with
-                reading order, and theatre with an obvious path forward.
-              </p>
-              <p data-i18n="blog.entry3.p2">
-                When the hierarchy is right, the screen feels inevitable. The
-                visitor does not have to decode the interface before they can
-                enjoy it.
-              </p>
-            </div>
-          </details>
+        <div class="case-overview__grid">
+          <article class="reveal">
+            <span>01</span>
+            <h2 data-case-label="challenge">Challenge</h2>
+            <p data-case-challenge></p>
+          </article>
+          <article class="reveal">
+            <span>02</span>
+            <h2 data-case-label="exactRole">Exact role</h2>
+            <p data-case-role-detail></p>
+          </article>
+          <article class="reveal">
+            <span>03</span>
+            <h2 data-case-label="process">Design process</h2>
+            <p data-case-process></p>
+          </article>
+          <article class="reveal">
+            <span>04</span>
+            <h2 data-case-label="result">Final result</h2>
+            <p data-case-result></p>
+          </article>
         </div>
       </section>
 
-      <section class="journal-cta section-dark">
-        <p class="label reveal" data-i18n="blog.endnote">End note</p>
-        <div class="journal-cta__inner reveal">
-          <h2 data-i18n-html="blog.ctaTitle">
-            Have a thought<br />worth <em>building?</em>
-          </h2>
-          <a
-            class="round-link round-link--light magnetic"
-            href="index.html#contact"
-          >
-            <span data-i18n-html="blog.cta">Start a<br />conversation</span>
-            <span aria-hidden="true">↗</span>
-          </a>
+      <section class="case-decisions section-dark">
+        <div class="section-heading section-heading--dark reveal">
+          <span class="section-number">02</span>
+          <p data-case-label="decisions">Important UI decisions</p>
+          <p class="section-heading__side" data-case-label="decisionsSide">
+            Evidence in the interface
+          </p>
         </div>
+        <div class="case-decisions__intro reveal">
+          <h2 data-case-label="designedToWork">
+            Designed to work,<br /><em>not just to look good.</em>
+          </h2>
+          <p data-case-evidence></p>
+        </div>
+        <div class="case-decisions__list" data-case-decisions></div>
+      </section>
+
+      <section class="case-screens section-bone">
+        <div class="section-heading reveal">
+          <span class="section-number">03</span>
+          <p data-case-label="screens">Responsive screens</p>
+          <p class="section-heading__side" data-case-label="screensSide">
+            Desktop / Mobile
+          </p>
+        </div>
+        <div class="case-screens__grid">
+          <figure class="case-screen case-screen--desktop reveal">
+            <figcaption data-case-label="desktop">
+              Desktop composition
+            </figcaption>
+            <div>
+              <img
+                data-case-image-copy
+                src="assets/images/projects/apex-motorsport.webp"
+                alt=""
+                width="1512"
+                height="640"
+              />
+            </div>
+          </figure>
+          <figure class="case-screen case-screen--mobile reveal">
+            <figcaption data-case-label="mobile">
+              Mobile crop / hierarchy check
+            </figcaption>
+            <div>
+              <img
+                data-case-image-copy
+                src="assets/images/projects/apex-motorsport.webp"
+                alt=""
+                width="1512"
+                height="640"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-links section-dark">
+        <p class="label reveal" data-case-label="links">Project links</p>
+        <div class="case-links__inner reveal">
+          <h2 data-case-label="explore">
+            Explore the<br /><em>finished work.</em>
+          </h2>
+          <div class="case-links__actions">
+            <a
+              class="button-primary"
+              data-case-live
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span data-case-label="live">Visit live website</span
+              ><span>↗</span>
+            </a>
+            <a
+              class="button-secondary button-secondary--dark"
+              data-case-github
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span data-case-label="github">View GitHub repository</span
+              ><span>↗</span>
+            </a>
+            <p class="case-links__private" data-case-private></p>
+          </div>
+        </div>
+        <a class="case-next reveal" data-case-next href="#">
+          <span data-case-label="next">Next case study</span>
+          <b data-case-next-title></b>
+          <span aria-hidden="true">→</span>
+        </a>
       </section>
     </main>
 

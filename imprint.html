@@ -7,48 +7,96 @@
       name="description"
       content="Imprint and contact information for Lazar Minkov, web developer in Bern, Switzerland."
     />
-    <meta name="theme-color" content="#F5F1E9" />
+    <meta name="theme-color" content="#11100E" />
     <title>Imprint — Lazar Minkov</title>
     <link rel="canonical" href="https://lazrm.com/imprint.html" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="assets/fonts/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="assets/fonts/dm-sans-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/instrument-serif-regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="translations.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body data-page="imprint">
-    <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="common.skip"
+      >Skip to content</a
+    >
 
     <div class="page-wipe" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__label"></span>
+    </div>
 
     <header class="site-header">
-      <a class="brand magnetic" href="index.html" aria-label="Lazar Minkov, back to home">
-        <span>LM</span><sup>26</sup>
+      <a
+        class="brand magnetic"
+        href="index.html"
+        aria-label="Lazar Minkov, back to home"
+      >
+        <span class="brand__name">Lazar Minkov</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html#home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
-        <a href="index.html#about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
-        <a href="index.html#portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
-        <a href="index.html#contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
-        <a href="blog.html"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
+        <a href="index.html#home"
+          ><span>01</span><b data-i18n="common.nav.home">Home</b></a
+        >
+        <a href="index.html#about"
+          ><span>02</span><b data-i18n="common.nav.about">About</b></a
+        >
+        <a href="index.html#portfolio"
+          ><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a
+        >
+        <a href="index.html#contact"
+          ><span>04</span><b data-i18n="common.nav.contact">Contact</b></a
+        >
+        <a href="blog.html"
+          ><span>05</span><b data-i18n="common.nav.blog">Blog</b></a
+        >
       </nav>
 
       <div class="header-meta">
         <span>Bern, CH</span>
         <span class="bern-time" aria-label="Current time in Bern">--:--</span>
-        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="common.languageLabel">
-          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+        <div
+          class="language-switch"
+          role="group"
+          aria-label="Language"
+          data-i18n-aria-label="common.languageLabel"
+        >
+          <button type="button" data-lang-switch="en" aria-pressed="true">
+            EN
+          </button>
           <span>/</span>
-          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+          <button type="button" data-lang-switch="de" aria-pressed="false">
+            DE
+          </button>
         </div>
       </div>
 
-      <button class="menu-toggle magnetic" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <a class="header-cta magnetic" href="index.html#contact">
+        <span data-i18n="home.hero.primary">Start a project</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="menu-toggle magnetic"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <span class="menu-toggle__text" data-i18n="common.menu">Menu</span>
         <span class="menu-toggle__dot" aria-hidden="true"></span>
       </button>
@@ -58,22 +106,52 @@
       <div class="mobile-menu__top">
         <span data-i18n="common.navigation">Navigation</span>
         <div class="mobile-language">
-          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang-switch="en" aria-pressed="true">
+            EN
+          </button>
           <span>/</span>
-          <button type="button" data-lang-switch="de" aria-pressed="false">DE</button>
+          <button type="button" data-lang-switch="de" aria-pressed="false">
+            DE
+          </button>
         </div>
       </div>
       <nav aria-label="Mobile navigation">
-        <a href="index.html#home"><span>01</span><b data-i18n="common.nav.home">Home</b></a>
-        <a href="index.html#about"><span>02</span><b data-i18n="common.nav.about">About</b></a>
-        <a href="index.html#portfolio"><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a>
-        <a href="index.html#contact"><span>04</span><b data-i18n="common.nav.contact">Contact</b></a>
-        <a href="blog.html"><span>05</span><b data-i18n="common.nav.blog">Blog</b></a>
+        <a href="index.html#home"
+          ><span>01</span><b data-i18n="common.nav.home">Home</b></a
+        >
+        <a href="index.html#about"
+          ><span>02</span><b data-i18n="common.nav.about">About</b></a
+        >
+        <a href="index.html#portfolio"
+          ><span>03</span><b data-i18n="common.nav.portfolio">Portfolio</b></a
+        >
+        <a href="index.html#contact"
+          ><span>04</span><b data-i18n="common.nav.contact">Contact</b></a
+        >
+        <a href="blog.html"
+          ><span>05</span><b data-i18n="common.nav.blog">Blog</b></a
+        >
       </nav>
+      <a class="mobile-menu__cta" href="index.html#contact">
+        <span data-i18n="home.hero.primary">Start a project</span>
+        <span aria-hidden="true">↗</span>
+      </a>
       <div class="mobile-menu__footer">
-        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram ↗</a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer"
+          >GitHub ↗</a
+        >
+        <a
+          href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn ↗</a
+        >
+        <a
+          href="https://www.instagram.com/lazar.minkov"
+          target="_blank"
+          rel="noreferrer"
+          >Instagram ↗</a
+        >
       </div>
     </div>
 
@@ -87,7 +165,8 @@
           Imprint<br /><em>&amp; information.</em>
         </h1>
         <p class="imprint-hero__intro reveal" data-i18n="imprint.intro">
-          Responsible for the content and operation of this independent portfolio website.
+          Responsible for the content and operation of this independent
+          portfolio website.
         </p>
       </section>
 
@@ -98,27 +177,25 @@
             <h2 data-i18n="imprint.contactTitle">Contact</h2>
             <p>
               Lazar Minkov<br />
-              <a href="mailto:lazar.minkov@proton.me">lazar.minkov@proton.me</a><br />
-              <a href="tel:+41782348028">078 234 80 28</a>
+              <a href="mailto:lazar.minkov@proton.me">lazar.minkov@proton.me</a>
             </p>
           </article>
 
           <article class="legal-card reveal">
             <span>02</span>
-            <h2 data-i18n="imprint.addressTitle">Address</h2>
-            <address>
-              Lazar Minkov<br />
-              Scheunerweg 28<br />
-              3063 Ittigen, Bern<br />
-              Switzerland
-            </address>
+            <h2 data-i18n="imprint.addressTitle">Location</h2>
+            <p data-i18n="imprint.locationText">
+              Based in Bern, Switzerland. Available for Swiss and remote
+              projects.
+            </p>
           </article>
 
           <article class="legal-card reveal">
             <span>03</span>
             <h2 data-i18n="imprint.detailsTitle">Details</h2>
             <p data-i18n="imprint.detailsText">
-              Independent web developer and UI/UX designer based in Ittigen, Bern, Switzerland.
+              Independent web developer and UI/UX designer based in Bern,
+              Switzerland.
             </p>
           </article>
 
@@ -126,8 +203,9 @@
             <span>04</span>
             <h2 data-i18n="imprint.liabilityTitle">Liability</h2>
             <p data-i18n="imprint.liabilityText">
-              The contents of this website are prepared with care. No guarantee is given for the
-              completeness, accuracy or continued availability of external links.
+              The contents of this website are prepared with care. No guarantee
+              is given for the completeness, accuracy or continued availability
+              of external links.
             </p>
           </article>
 
@@ -135,9 +213,9 @@
             <span>05</span>
             <h2 data-i18n="imprint.privacyTitle">Privacy</h2>
             <p data-i18n="imprint.privacyText">
-              This static website does not store contact-form submissions. The form opens your
-              own email application. The embedded map is provided by OpenStreetMap and may
-              receive technical connection data when loaded.
+              This static website does not store contact-form submissions. The
+              form opens your own email application. No residential address is
+              published or collected here.
             </p>
           </article>
 
@@ -145,9 +223,9 @@
             <span>06</span>
             <h2 data-i18n="imprint.copyrightTitle">Copyright</h2>
             <p data-i18n="imprint.copyrightText">
-              Unless otherwise stated, the design, text and original code of this website are ©
-              Lazar Minkov. Project imagery remains the property of the respective projects and
-              clients.
+              Unless otherwise stated, the design, text and original code of
+              this website are © Lazar Minkov. Project imagery remains the
+              property of the respective projects and clients.
             </p>
           </article>
         </div>
@@ -160,14 +238,30 @@
         <span data-i18n="common.footerRole">Web developer / Bern</span>
       </div>
       <nav aria-label="Social links">
-        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-        <a href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-        <a href="https://www.instagram.com/lazar.minkov" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
-        <a href="imprint.html"><b data-i18n="common.imprint">Imprint</b> <span>↗</span></a>
+        <a href="https://github.com/dinero2004" target="_blank" rel="noreferrer"
+          >GitHub <span>↗</span></a
+        >
+        <a
+          href="https://www.linkedin.com/in/lazar-minkov-b0494b22a/"
+          target="_blank"
+          rel="noreferrer"
+          >LinkedIn <span>↗</span></a
+        >
+        <a
+          href="https://www.instagram.com/lazar.minkov"
+          target="_blank"
+          rel="noreferrer"
+          >Instagram <span>↗</span></a
+        >
+        <a href="imprint.html"
+          ><b data-i18n="common.imprint">Imprint</b> <span>↗</span></a
+        >
       </nav>
       <div class="site-footer__meta">
         <p>© <span data-year></span> Lazar Minkov</p>
-        <button type="button" data-back-to-top data-i18n="common.backTop">Back to top ↑</button>
+        <button type="button" data-back-to-top data-i18n="common.backTop">
+          Back to top ↑
+        </button>
       </div>
     </footer>
   </body>

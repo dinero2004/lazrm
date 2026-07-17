@@ -25,15 +25,20 @@ window.LAZRM_TRANSLATIONS = {
     "common.backTop": "Back to top ↑",
     "common.languageLabel": "Language",
     "common.visitProject": "Visit project",
+    "common.viewCaseStudy": "View case study",
     "common.live": "Live",
 
-    "home.loader": "Bern, Switzerland",
     "home.hero.eyebrow1": "Web developer & UI/UX designer",
     "home.hero.eyebrow2": "Designing from Bern, Switzerland",
     "home.hero.title":
-      "<span class=\"title-line\"><span>Web experiences</span></span><span class=\"title-line title-line--offset\"><span>with a <em>point</em></span></span><span class=\"title-line\"><span>of view.</span></span>",
+      '<span class="title-line"><span>Distinctive websites,</span></span><span class="title-line"><span><em>designed</em> and developed</span></span><span class="title-line"><span>with purpose.</span></span>',
     "home.hero.intro":
-      "I combine strategic design, precise development and thoughtful motion to create digital experiences with character.",
+      "I help businesses turn ideas into clear, memorable digital experiences.",
+    "home.hero.support": "Web experiences with a point of view.",
+    "home.hero.primary": "Start a project",
+    "home.hero.secondary": "View selected work",
+    "home.hero.showcase": "Featured interface / rotating selection",
+    "home.hero.explore": "Explore projects ↓",
     "home.hero.selected": "Selected<br />work",
     "home.marquee.design": "Design direction",
     "home.marquee.development": "Creative development",
@@ -41,8 +46,9 @@ window.LAZRM_TRANSLATIONS = {
     "home.marquee.bern": "Based in Bern",
 
     "home.about.kicker": "About / Approach",
-    "home.about.side": "Digital craft, without the theatre.",
-    "home.about.statement": "Small on <em>footprint</em>,<br />large on feeling.",
+    "home.about.side": "Design direction meets working code.",
+    "home.about.statement":
+      "Small on <em>footprint</em>,<br />large on feeling.",
     "home.about.profile": "Profile",
     "home.about.bio1":
       "I’m Lazar, a web developer and UI/UX designer working where visual identity, interface design and front-end engineering overlap.",
@@ -65,8 +71,18 @@ window.LAZRM_TRANSLATIONS = {
     "home.background.kicker": "Selected background",
     "home.background.side": "Design knowledge meets commercial experience.",
     "home.background.title": "Built across<br /><em>disciplines.</em>",
-    "home.background.item1.date": "2023 — 2027",
-    "home.background.item1.title": "SAE Institute Zürich",
+    "home.background.skills.design": "Design",
+    "home.background.skills.designList": "Figma, UI systems, prototyping",
+    "home.background.skills.frontend": "Frontend",
+    "home.background.skills.frontendList":
+      "HTML, CSS, JavaScript, TypeScript, Next.js",
+    "home.background.skills.backend": "Backend",
+    "home.background.skills.backendList": "PHP, Laravel, REST APIs",
+    "home.background.skills.workflow": "Workflow",
+    "home.background.skills.workflowList":
+      "Git, accessibility, responsive development",
+    "home.background.item1.date": "Ongoing · Expected 2027",
+    "home.background.item1.title": "BA/BSc studies — SAE Institute Zürich",
     "home.background.item1.text":
       "Bachelor studies focused on business, marketing, project management, web development and UI/UX design.",
     "home.background.item2.date": "Awarded 2025",
@@ -82,23 +98,36 @@ window.LAZRM_TRANSLATIONS = {
     "home.background.item4.text":
       "Sales strategy, customer consulting, financing and vehicle coordination in the Bern region.",
 
-    "home.portfolio.kicker": "Selected client work",
+    "home.portfolio.kicker": "Selected projects",
     "home.portfolio.side": "Direction / Interaction / Build",
-    "home.portfolio.title": "Work with<br /><em>traction.</em>",
+    "home.portfolio.title": "Selected work,<br /><em>made tangible.</em>",
     "home.portfolio.intro":
-      "Four live projects across automotive, gaming, photography and specialist e-commerce — each shaped around a distinct audience and business goal.",
+      "Four projects across automotive, gaming, photography and specialist e-commerce — each shaped around a clear audience, interface and outcome.",
+    "home.portfolio.apex.kind": "01 — Concept project",
+    "home.portfolio.apex.type": "Automotive / Digital showroom",
     "home.portfolio.apex.tag": "Digital showroom",
     "home.portfolio.apex.description":
-      "UI/UX, front-end and motion for a curated sports and luxury car platform.",
+      "A premium, enquiry-led showroom that gives high-value inventory a clearer sales path.",
+    "home.portfolio.apex.stack": "UI/UX · React · TypeScript · 2026",
+    "home.portfolio.mikes.kind": "02 — Academic project",
+    "home.portfolio.mikes.type": "Gaming / Full-stack launch platform",
     "home.portfolio.mikes.tag": "Game release",
     "home.portfolio.mikes.description":
-      "Launch experience for a dark first-person extraction shooter, connected to its public Steam release.",
+      "A cinematic product experience connecting the game world, project content and public Steam release.",
+    "home.portfolio.mikes.stack": "Full-stack · Next.js · Laravel · 2026",
+    "home.portfolio.kfoto.kind": "03 — Client project",
+    "home.portfolio.kfoto.type": "Photography / Portfolio & booking",
     "home.portfolio.kfoto.tag": "Photography studio",
     "home.portfolio.kfoto.description":
-      "Editorial portfolio, filterable gallery and booking journey for a Bern photographer.",
+      "A visual-first portfolio that makes the studio offer and booking path easier to navigate.",
+    "home.portfolio.kfoto.stack": "UI/UX · WordPress · Custom theme · 2024",
+    "home.portfolio.bknives.kind": "04 — Client project",
+    "home.portfolio.bknives.type": "E-commerce / Specialist retail",
     "home.portfolio.bknives.tag": "E-commerce",
     "home.portfolio.bknives.description":
-      "Product storytelling and online shopping experience for authentic Japanese kitchen knives.",
+      "A product-led storefront pairing specialist education with a direct shopping journey.",
+    "home.portfolio.bknives.stack":
+      "E-commerce · WordPress · WooCommerce · 2022",
     "home.portfolio.footer":
       "Have a project that needs a distinct point of view?",
     "home.portfolio.cta": "Start a conversation",
@@ -125,20 +154,18 @@ window.LAZRM_TRANSLATIONS = {
     "home.contact.messageLabel": "A few words about the project",
     "home.contact.messagePlaceholder": "Scope, ambition, timing…",
     "home.contact.send": "Send enquiry",
-    "home.office.kicker": "Studio / Office",
-    "home.office.side": "Ittigen, Bern",
-    "home.office.heading": "Let’s meet in<br /><em>the real world.</em>",
-    "home.office.addressLabel": "Address",
+    "home.office.kicker": "Location / Availability",
+    "home.office.side": "Bern, Switzerland",
+    "home.office.basedLabel": "Based in",
+    "home.office.heading": "Bern,<br /><em>Switzerland.</em>",
+    "home.office.availability": "Available for Swiss and remote projects.",
     "home.office.emailLabel": "Email",
-    "home.office.phoneLabel": "Phone",
     "home.office.socialLabel": "Elsewhere",
-    "home.office.mapOpen": "Open full map ↗",
-    "home.office.mapTitle": "Map showing Scheunerweg 28, 3063 Ittigen",
 
     "blog.hero.meta1": "Journal / 2026",
     "blog.hero.meta2": "Design · Development · Culture",
     "blog.hero.title":
-      "<span class=\"title-line\"><span>Notes from</span></span><span class=\"title-line title-line--offset\"><span>the <em>margin.</em></span></span>",
+      '<span class="title-line"><span>Notes from</span></span><span class="title-line title-line--offset"><span>the <em>margin.</em></span></span>',
     "blog.hero.intro":
       "Short observations on building the web with more character, less noise and respect for the people on the other side of the screen.",
     "blog.latest": "Latest notes",
@@ -173,16 +200,18 @@ window.LAZRM_TRANSLATIONS = {
     "imprint.intro":
       "Responsible for the content and operation of this independent portfolio website.",
     "imprint.contactTitle": "Contact",
-    "imprint.addressTitle": "Address",
+    "imprint.addressTitle": "Location",
+    "imprint.locationText":
+      "Based in Bern, Switzerland. Available for Swiss and remote projects.",
     "imprint.detailsTitle": "Details",
     "imprint.detailsText":
-      "Independent web developer and UI/UX designer based in Ittigen, Bern, Switzerland.",
+      "Independent web developer and UI/UX designer based in Bern, Switzerland.",
     "imprint.liabilityTitle": "Liability",
     "imprint.liabilityText":
       "The contents of this website are prepared with care. No guarantee is given for the completeness, accuracy or continued availability of external links.",
     "imprint.privacyTitle": "Privacy",
     "imprint.privacyText":
-      "This static website does not store contact-form submissions. The form opens your own email application. The embedded map is provided by OpenStreetMap and may receive technical connection data when loaded.",
+      "This static website does not store contact-form submissions. The form opens your own email application. No residential address is published or collected here.",
     "imprint.copyrightTitle": "Copyright",
     "imprint.copyrightText":
       "Unless otherwise stated, the design, text and original code of this website are © Lazar Minkov. Project imagery remains the property of the respective projects and clients.",
@@ -214,15 +243,20 @@ window.LAZRM_TRANSLATIONS = {
     "common.backTop": "Nach oben ↑",
     "common.languageLabel": "Sprache",
     "common.visitProject": "Projekt ansehen",
+    "common.viewCaseStudy": "Case Study ansehen",
     "common.live": "Live",
 
-    "home.loader": "Bern, Schweiz",
     "home.hero.eyebrow1": "Webentwickler & UI/UX Designer",
     "home.hero.eyebrow2": "Design aus Bern, Schweiz",
     "home.hero.title":
-      "<span class=\"title-line\"><span>Web-Erlebnisse</span></span><span class=\"title-line title-line--offset\"><span>mit <em>eigener</em></span></span><span class=\"title-line\"><span>Haltung.</span></span>",
+      '<span class="title-line"><span>Unverwechselbare Websites,</span></span><span class="title-line"><span><em>gestaltet</em> und entwickelt</span></span><span class="title-line"><span>mit klarem Zweck.</span></span>',
     "home.hero.intro":
-      "Ich verbinde strategisches Design, präzise Entwicklung und durchdachte Animation zu digitalen Erlebnissen mit Charakter.",
+      "Ich verwandle Ideen von Unternehmen in klare, einprägsame digitale Erlebnisse.",
+    "home.hero.support": "Web-Erlebnisse mit einer klaren Haltung.",
+    "home.hero.primary": "Projekt starten",
+    "home.hero.secondary": "Ausgewählte Projekte",
+    "home.hero.showcase": "Ausgewähltes Interface / wechselnde Auswahl",
+    "home.hero.explore": "Projekte entdecken ↓",
     "home.hero.selected": "Ausgewählte<br />Projekte",
     "home.marquee.design": "Design Direction",
     "home.marquee.development": "Creative Development",
@@ -230,8 +264,9 @@ window.LAZRM_TRANSLATIONS = {
     "home.marquee.bern": "Aus Bern",
 
     "home.about.kicker": "Über mich / Ansatz",
-    "home.about.side": "Digitales Handwerk, ohne Theater.",
-    "home.about.statement": "Klein im <em>Umfang</em>,<br />gross in der Wirkung.",
+    "home.about.side": "Designrichtung trifft funktionierenden Code.",
+    "home.about.statement":
+      "Klein im <em>Umfang</em>,<br />gross in der Wirkung.",
     "home.about.profile": "Profil",
     "home.about.bio1":
       "Ich bin Lazar, Webentwickler und UI/UX Designer an der Schnittstelle von visueller Identität, Interface Design und Front-end Engineering.",
@@ -254,8 +289,18 @@ window.LAZRM_TRANSLATIONS = {
     "home.background.kicker": "Ausgewählter Werdegang",
     "home.background.side": "Designwissen trifft Geschäftserfahrung.",
     "home.background.title": "Über mehrere<br /><em>Disziplinen.</em>",
-    "home.background.item1.date": "2023 — 2027",
-    "home.background.item1.title": "SAE Institute Zürich",
+    "home.background.skills.design": "Design",
+    "home.background.skills.designList": "Figma, UI-Systeme, Prototyping",
+    "home.background.skills.frontend": "Frontend",
+    "home.background.skills.frontendList":
+      "HTML, CSS, JavaScript, TypeScript, Next.js",
+    "home.background.skills.backend": "Backend",
+    "home.background.skills.backendList": "PHP, Laravel, REST APIs",
+    "home.background.skills.workflow": "Workflow",
+    "home.background.skills.workflowList":
+      "Git, Barrierefreiheit, responsive Entwicklung",
+    "home.background.item1.date": "Laufend · Erwartet 2027",
+    "home.background.item1.title": "BA/BSc-Studium — SAE Institute Zürich",
     "home.background.item1.text":
       "Bachelorstudium mit Fokus auf BWL, Marketing, Projektmanagement, Webentwicklung und UI/UX Design.",
     "home.background.item2.date": "Abschluss 2025",
@@ -271,25 +316,38 @@ window.LAZRM_TRANSLATIONS = {
     "home.background.item4.text":
       "Verkaufsstrategie, Kundenberatung, Finanzierung und Fahrzeugkoordination in der Region Bern.",
 
-    "home.portfolio.kicker": "Ausgewählte Kundenprojekte",
+    "home.portfolio.kicker": "Ausgewählte Projekte",
     "home.portfolio.side": "Direction / Interaktion / Umsetzung",
-    "home.portfolio.title": "Arbeit mit<br /><em>Wirkung.</em>",
+    "home.portfolio.title":
+      "Ausgewählte Arbeit,<br /><em>greifbar gemacht.</em>",
     "home.portfolio.intro":
-      "Vier Live-Projekte aus Automotive, Gaming, Fotografie und spezialisiertem E-Commerce — jedes auf eine klare Zielgruppe und ein konkretes Geschäftsziel ausgerichtet.",
+      "Vier Projekte aus Automotive, Gaming, Fotografie und spezialisiertem E-Commerce — jedes für eine klare Zielgruppe, ein präzises Interface und ein konkretes Ergebnis gestaltet.",
+    "home.portfolio.apex.kind": "01 — Konzeptprojekt",
+    "home.portfolio.apex.type": "Automotive / Digitaler Showroom",
     "home.portfolio.apex.tag": "Digitaler Showroom",
     "home.portfolio.apex.description":
-      "UI/UX, Front-end und Motion für eine kuratierte Plattform für Sport- und Luxusfahrzeuge.",
+      "Ein hochwertiger, anfrageorientierter Showroom mit einem klareren Verkaufsweg für exklusiven Fahrzeugbestand.",
+    "home.portfolio.apex.stack": "UI/UX · React · TypeScript · 2026",
+    "home.portfolio.mikes.kind": "02 — Studienprojekt",
+    "home.portfolio.mikes.type": "Gaming / Full-Stack Launch-Plattform",
     "home.portfolio.mikes.tag": "Game Release",
     "home.portfolio.mikes.description":
-      "Launch-Erlebnis für einen düsteren First-Person Extraction Shooter mit Verbindung zum öffentlichen Steam-Release.",
+      "Ein filmisches Produkterlebnis, das Spielwelt, Projektinhalte und den öffentlichen Steam-Release verbindet.",
+    "home.portfolio.mikes.stack": "Full-Stack · Next.js · Laravel · 2026",
+    "home.portfolio.kfoto.kind": "03 — Kundenprojekt",
+    "home.portfolio.kfoto.type": "Fotografie / Portfolio & Buchung",
     "home.portfolio.kfoto.tag": "Fotostudio",
     "home.portfolio.kfoto.description":
-      "Editorial Portfolio, filterbare Galerie und Buchungsweg für eine Berner Fotografin.",
+      "Ein visuell geführtes Portfolio, das Studioangebot und Buchungsweg leichter zugänglich macht.",
+    "home.portfolio.kfoto.stack": "UI/UX · WordPress · Custom Theme · 2024",
+    "home.portfolio.bknives.kind": "04 — Kundenprojekt",
+    "home.portfolio.bknives.type": "E-Commerce / Spezialhandel",
     "home.portfolio.bknives.tag": "E-Commerce",
     "home.portfolio.bknives.description":
-      "Produktstorytelling und Online-Shop für authentische japanische Küchenmesser.",
-    "home.portfolio.footer":
-      "Ein Projekt, das eine klare Haltung braucht?",
+      "Ein produktorientierter Shop, der Fachwissen mit einem direkten Kaufweg verbindet.",
+    "home.portfolio.bknives.stack":
+      "E-Commerce · WordPress · WooCommerce · 2022",
+    "home.portfolio.footer": "Ein Projekt, das eine klare Haltung braucht?",
     "home.portfolio.cta": "Gespräch starten",
 
     "home.principles.kicker": "Arbeitsprinzipien",
@@ -314,20 +372,19 @@ window.LAZRM_TRANSLATIONS = {
     "home.contact.messageLabel": "Ein paar Worte zum Projekt",
     "home.contact.messagePlaceholder": "Umfang, Anspruch, Timing…",
     "home.contact.send": "Anfrage senden",
-    "home.office.kicker": "Studio / Büro",
-    "home.office.side": "Ittigen, Bern",
-    "home.office.heading": "Treffen wir uns<br /><em>in der echten Welt.</em>",
-    "home.office.addressLabel": "Adresse",
+    "home.office.kicker": "Standort / Verfügbarkeit",
+    "home.office.side": "Bern, Schweiz",
+    "home.office.basedLabel": "Standort",
+    "home.office.heading": "Bern,<br /><em>Schweiz.</em>",
+    "home.office.availability":
+      "Verfügbar für Schweizer und internationale Remote-Projekte.",
     "home.office.emailLabel": "E-Mail",
-    "home.office.phoneLabel": "Telefon",
     "home.office.socialLabel": "Weitere Profile",
-    "home.office.mapOpen": "Grosse Karte öffnen ↗",
-    "home.office.mapTitle": "Karte mit Scheunerweg 28, 3063 Ittigen",
 
     "blog.hero.meta1": "Journal / 2026",
     "blog.hero.meta2": "Design · Entwicklung · Kultur",
     "blog.hero.title":
-      "<span class=\"title-line\"><span>Notizen aus</span></span><span class=\"title-line title-line--offset\"><span>dem <em>Rand.</em></span></span>",
+      '<span class="title-line"><span>Notizen aus</span></span><span class="title-line title-line--offset"><span>dem <em>Rand.</em></span></span>',
     "blog.hero.intro":
       "Kurze Beobachtungen über ein Web mit mehr Charakter, weniger Lärm und Respekt für die Menschen auf der anderen Seite des Bildschirms.",
     "blog.latest": "Neueste Notizen",
@@ -354,7 +411,8 @@ window.LAZRM_TRANSLATIONS = {
     "blog.entry3.p2":
       "Wenn die Hierarchie stimmt, wirkt der Screen selbstverständlich. Besucher müssen das Interface nicht entschlüsseln, bevor sie es geniessen können.",
     "blog.endnote": "Zum Schluss",
-    "blog.ctaTitle": "Eine Idee, die es wert ist,<br /><em>gebaut zu werden?</em>",
+    "blog.ctaTitle":
+      "Eine Idee, die es wert ist,<br /><em>gebaut zu werden?</em>",
     "blog.cta": "Gespräch<br />starten",
 
     "imprint.eyebrow": "Rechtliches / Kontakt",
@@ -362,16 +420,18 @@ window.LAZRM_TRANSLATIONS = {
     "imprint.intro":
       "Verantwortlich für Inhalt und Betrieb dieser unabhängigen Portfolio-Website.",
     "imprint.contactTitle": "Kontakt",
-    "imprint.addressTitle": "Adresse",
+    "imprint.addressTitle": "Standort",
+    "imprint.locationText":
+      "Mit Sitz in Bern, Schweiz. Verfügbar für Schweizer und internationale Remote-Projekte.",
     "imprint.detailsTitle": "Angaben",
     "imprint.detailsText":
-      "Selbstständiger Webentwickler und UI/UX Designer mit Sitz in Ittigen, Bern, Schweiz.",
+      "Selbstständiger Webentwickler und UI/UX Designer mit Sitz in Bern, Schweiz.",
     "imprint.liabilityTitle": "Haftung",
     "imprint.liabilityText":
       "Die Inhalte dieser Website werden mit Sorgfalt erstellt. Für Vollständigkeit, Richtigkeit oder die dauerhafte Verfügbarkeit externer Links wird keine Gewähr übernommen.",
     "imprint.privacyTitle": "Datenschutz",
     "imprint.privacyText":
-      "Diese statische Website speichert keine Formulareingaben. Das Formular öffnet dein eigenes E-Mail-Programm. Die eingebettete Karte wird von OpenStreetMap bereitgestellt und kann beim Laden technische Verbindungsdaten erhalten.",
+      "Diese statische Website speichert keine Formulareingaben. Das Formular öffnet dein eigenes E-Mail-Programm. Eine Wohnadresse wird weder veröffentlicht noch hier erfasst.",
     "imprint.copyrightTitle": "Urheberrecht",
     "imprint.copyrightText":
       "Sofern nicht anders angegeben, sind Design, Texte und Originalcode dieser Website © Lazar Minkov. Projektbilder verbleiben im Eigentum der jeweiligen Projekte und Kunden.",

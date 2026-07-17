@@ -1,6 +1,8 @@
 document.documentElement.classList.add("js");
 
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 const body = document.body;
 const translations = window.LAZRM_TRANSLATIONS || {};
 let activeLanguage = "en";
@@ -22,11 +24,17 @@ const applyLanguage = (language) => {
   });
 
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-    element.setAttribute("placeholder", translate(element.dataset.i18nPlaceholder));
+    element.setAttribute(
+      "placeholder",
+      translate(element.dataset.i18nPlaceholder),
+    );
   });
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-    element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
+    element.setAttribute(
+      "aria-label",
+      translate(element.dataset.i18nAriaLabel),
+    );
   });
 
   document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
@@ -45,10 +53,13 @@ const applyLanguage = (language) => {
 
   const page = body.dataset.page;
   const title = translations[activeLanguage]?.[`meta.${page}.title`];
-  const description = translations[activeLanguage]?.[`meta.${page}.description`];
+  const description =
+    translations[activeLanguage]?.[`meta.${page}.description`];
   if (title) document.title = title;
   if (description) {
-    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", description);
   }
 
   const menuLabel = document.querySelector(".menu-toggle__text");
@@ -59,6 +70,12 @@ const applyLanguage = (language) => {
         : "common.menu",
     );
   }
+
+  window.dispatchEvent(
+    new CustomEvent("lazrm:languagechange", {
+      detail: { language: activeLanguage },
+    }),
+  );
 };
 
 const initLanguage = () => {
@@ -86,8 +103,7 @@ const initLanguage = () => {
 };
 
 const setPageReady = () => {
-  const delay = document.querySelector(".loader") && !prefersReducedMotion ? 1500 : 80;
-  window.setTimeout(() => body.classList.add("is-ready"), delay);
+  window.setTimeout(() => body.classList.add("is-ready"), 40);
 };
 
 const updateClock = () => {
@@ -135,7 +151,8 @@ const initScrollUI = () => {
   let ticking = false;
 
   const render = () => {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollable =
+      document.documentElement.scrollHeight - window.innerHeight;
     const ratio = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
 
     if (progress) progress.style.transform = `scaleX(${ratio})`;
@@ -159,7 +176,12 @@ const initActiveNavigation = () => {
   const sections = document.querySelectorAll("[data-section]");
   const navLinks = document.querySelectorAll(".desktop-nav [data-nav]");
 
-  if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
+  if (
+    !sections.length ||
+    !navLinks.length ||
+    !("IntersectionObserver" in window)
+  )
+    return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -169,7 +191,10 @@ const initActiveNavigation = () => {
 
       if (!visible) return;
       navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.dataset.nav === visible.target.dataset.section);
+        link.classList.toggle(
+          "is-active",
+          link.dataset.nav === visible.target.dataset.section,
+        );
       });
     },
     {
@@ -193,7 +218,8 @@ const initMenu = () => {
     menu.classList.toggle("is-open", open);
     menu.setAttribute("aria-hidden", String(!open));
     toggle.setAttribute("aria-expanded", String(open));
-    if (label) label.textContent = translate(open ? "common.close" : "common.menu");
+    if (label)
+      label.textContent = translate(open ? "common.close" : "common.menu");
   };
 
   toggle.addEventListener("click", () => {
@@ -211,7 +237,12 @@ const initMenu = () => {
 
 const initCursor = () => {
   const cursor = document.querySelector(".cursor");
-  if (!cursor || prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches) return;
+  if (
+    !cursor ||
+    prefersReducedMotion ||
+    !window.matchMedia("(pointer: fine)").matches
+  )
+    return;
 
   document.documentElement.classList.add("has-custom-cursor");
 
@@ -254,7 +285,8 @@ const initCursor = () => {
 };
 
 const initMagneticElements = () => {
-  if (prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches) return;
+  if (prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches)
+    return;
 
   document.querySelectorAll(".magnetic").forEach((element) => {
     element.addEventListener("pointermove", (event) => {
@@ -271,7 +303,8 @@ const initMagneticElements = () => {
 };
 
 const initProjectMotion = () => {
-  if (prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches) return;
+  if (prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches)
+    return;
 
   document.querySelectorAll(".project__media").forEach((media) => {
     const image = media.querySelector("img");
@@ -302,7 +335,9 @@ const initContactForm = () => {
     const email = String(data.get("email") || "");
     const message = String(data.get("message") || "");
     const subject = encodeURIComponent(
-      activeLanguage === "de" ? `Projektanfrage von ${name}` : `Project enquiry from ${name}`,
+      activeLanguage === "de"
+        ? `Projektanfrage von ${name}`
+        : `Project enquiry from ${name}`,
     );
     const bodyText = encodeURIComponent(
       activeLanguage === "de"
@@ -329,7 +364,7 @@ const initJournal = () => {
 };
 
 const initPageTransitions = () => {
-  document.querySelectorAll('a[href]').forEach((link) => {
+  document.querySelectorAll("a[href]").forEach((link) => {
     link.addEventListener("click", (event) => {
       if (
         event.defaultPrevented ||
@@ -344,16 +379,20 @@ const initPageTransitions = () => {
 
       const url = new URL(link.href, window.location.href);
       const current = new URL(window.location.href);
-      const isSameDocument = url.pathname === current.pathname && url.search === current.search;
+      const isSameDocument =
+        url.pathname === current.pathname && url.search === current.search;
       const isLocalPage = url.origin === current.origin && !isSameDocument;
 
       if (!isLocalPage) return;
 
       event.preventDefault();
       body.classList.add("is-leaving");
-      window.setTimeout(() => {
-        window.location.href = url.href;
-      }, prefersReducedMotion ? 0 : 560);
+      window.setTimeout(
+        () => {
+          window.location.href = url.href;
+        },
+        prefersReducedMotion ? 0 : 380,
+      );
     });
   });
 };
@@ -365,7 +404,10 @@ const initUtilities = () => {
 
   document.querySelectorAll("[data-back-to-top]").forEach((button) => {
     button.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
     });
   });
 };
